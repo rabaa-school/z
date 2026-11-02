@@ -38,7 +38,7 @@
 
     <!-- مؤشر المزامنة السحابية -->
     <div id="cloudStatusBanner" class="hidden bg-emerald-700 text-white text-xs py-1 px-4 text-center font-bold no-print">
-        <i class="fa-solid fa-cloud-arrow-up ml-1"></i> متصل بالسحابة: التعديلات تظهر لجميع الطلاب والزوار فوراً
+        <i class="fa-solid fa-cloud-arrow-up ml-1"></i> متصل بالسحابة: التعديلات والجداول المعتمدة تظهر لجميع الطلاب والزوار فوراً
     </div>
 
     <!-- الشريط العلوي الرسمي -->
@@ -57,7 +57,7 @@
         </div>
     </div>
 
-    <!-- الهيدر الرئيسي (ثابت غير متحرك مع النزول) -->
+    <!-- الهيدر الرئيسي -->
     <header class="bg-white shadow-md border-b-4 moe-gold-border no-print">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
             <div class="flex items-center gap-4">
@@ -73,7 +73,7 @@
 
             <nav class="flex flex-wrap items-center gap-1 sm:gap-2 text-sm font-bold">
                 <a href="#hero" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الرئيسية</a>
-                <a href="#services" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الخدمات الإلكترونية</a>
+                <a href="#services" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الخدمات والمنصات</a>
                 <a href="#schedule" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">جداول الحصص</a>
                 <a href="#honors" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">لوحة الشرف</a>
                 <a href="#gallery" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">معرض المدرسة</a>
@@ -94,7 +94,7 @@
         </div>
     </div>
 
-    <!-- القسم الترحيبي والسلايدر العلوي المربوط بالمعرض -->
+    <!-- القسم الترحيبي والسلايدر -->
     <section id="hero" class="moe-navy text-white py-12 px-4 relative overflow-hidden no-print">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div class="lg:col-span-6 space-y-5 text-center lg:text-right">
@@ -109,15 +109,14 @@
                 </p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
                     <a href="#schedule" class="moe-gold-bg hover:bg-amber-500 text-slate-950 font-black px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-calendar-days"></i> جدول الحصص الأسبوعي
+                        <i class="fa-solid fa-calendar-days"></i> جدول الحصص الجديد
                     </a>
-                    <a href="#gallery" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-images"></i> معرض الأنشطة والصور
+                    <a href="#services" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-laptop-code"></i> المنصات الإلكترونية
                     </a>
                 </div>
             </div>
 
-            <!-- السلايدر المربوط بمعرض الصور -->
             <div class="lg:col-span-6">
                 <div class="relative rounded-2xl overflow-hidden border-2 moe-gold-border shadow-2xl bg-slate-900 aspect-video group">
                     <img id="heroSlideImg" src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80" alt="صورة العرض" class="w-full h-full object-cover transition-all duration-700">
@@ -137,51 +136,98 @@
         </div>
     </section>
 
-    <!-- الخدمات الإلكترونية -->
+    <!-- الخدمات والمنصات التعليمية -->
     <section id="services" class="py-12 px-4 max-w-7xl mx-auto no-print">
         <div class="text-center mb-8">
-            <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full">الخدمات الرقمية</span>
-            <h2 class="text-2xl font-black text-slate-900 mt-2">خدمات الطلاب والمنصات التعليمية</h2>
+            <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full">الخدمات الرقمية والمنصات</span>
+            <h2 class="text-2xl font-black text-slate-900 mt-2">منصات التعلم والخدمات الإلكترونية المعتمدة</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div onclick="openExternalUrl('https://studentbooks.moe.gov.eg/')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group">
-                <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
-                    <i class="fa-solid fa-book-open-reader"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1. منصة الثقافة المالية -->
+            <div onclick="openExternalUrl('https://egy.app.spx-learning-square.com/login')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-emerald-500 transition group flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-coins"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
+                        <span>منصة الثقافة المالية</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-emerald-600"></i>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        المنصة التعليمية للثقافة المالية والأنشطة التفاعلية للطلاب (Learning Square) لتطوير المهارات الاقتصادية.
+                    </p>
                 </div>
-                <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
-                    <span>بنك المعرفة المصري</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-600"></i>
-                </h3>
-                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                    تحميل الكتب المدرسية الإلكترونية والتقييمات الأسبوعية والأداءات الصفية من موقع وزارة التربية والتعليم مباشرة.
-                </p>
-                <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700">
-                    فتح منصة الكتب الإلكترونية <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-700">
+                    تسجيل الدخول للمنصة <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
             </div>
 
-            <a href="#schedule" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group block">
-                <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
-                    <i class="fa-solid fa-table-list"></i>
+            <!-- 2. منصة البرمجة -->
+            <div onclick="openExternalUrl('https://sprixportal.jp/')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-cyan-500 transition group flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
+                        <span>منصة البرمجة (Sprix)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-600"></i>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        بوابة التعلّم واختبارات البرمجة التفاعلية (Sprix Portal) لتنمية المهارات التكنولوجية والحوسبة للطلاب.
+                    </p>
                 </div>
-                <h3 class="text-lg font-black text-slate-900 mb-2">جداول الفصول الدراسية</h3>
-                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                    استعراض وطباعة جداول الحصص الأسبوعية لجميع فصول الصف الأول والثاني الثانوي (5 فصول لكل صف).
-                </p>
+                <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-700">
+                    دخول منصة Sprix <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                </span>
+            </div>
+
+            <!-- 3. بنك المعرفة والكتب المدرسية -->
+            <div onclick="openExternalUrl('https://studentbooks.moe.gov.eg/')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
+                        <span>بنك المعرفة والكتب</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-600"></i>
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        تحميل المناهج الدراسية الإلكترونية والتقييمات الأسبوعية والأداءات الصفية من موقع وزارة التربية والتعليم مباشرة.
+                    </p>
+                </div>
+                <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700">
+                    فتح منصة المناهج <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                </span>
+            </div>
+
+            <!-- 4. جداول الفصول الدراسية -->
+            <a href="#schedule" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between block">
+                <div>
+                    <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-table-list"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">جداول الفصول الدراسية</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        استعراض وطباعة جداول الحصص المدرسية المعتمدة (5 حصص يومياً بزمن 50 دقيقة للحصة + فسحة 30 دقيقة).
+                    </p>
+                </div>
                 <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700">
                     عرض الجداول الآن <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
             </a>
 
-            <a href="#contact" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group block">
-                <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
-                    <i class="fa-solid fa-envelope-open-text"></i>
+            <!-- 5. صندوق الشكاوى والمقترحات -->
+            <a href="#contact" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between block md:col-span-2 lg:col-span-2">
+                <div>
+                    <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </div>
+                    <h3 class="text-lg font-black text-slate-900 mb-2">صندوق الشكاوى والمقترحات</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                        تواصل مباشر مع إدارة المدرسة لتقديم المقترحات أو الاستفسارات أو الشكاوى الطلابية ومتابعتها إلكترونياً.
+                    </p>
                 </div>
-                <h3 class="text-lg font-black text-slate-900 mb-2">صندوق الشكاوى والمقترحات</h3>
-                <p class="text-xs text-slate-600 leading-relaxed mb-4">
-                    تواصل مباشر مع إدارة المدرسة لتقديم المقترحات أو الشكاوى الطلابية وأولياء الأمور ومتابعتها.
-                </p>
                 <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700">
                     إرسال رسالة للإدارة <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
@@ -193,9 +239,9 @@
     <section id="schedule" class="py-12 px-4 bg-slate-100 border-y border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-8 no-print">
-                <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">الجداول المدرسية المعتمدة</span>
-                <h2 class="text-2xl font-black text-slate-900 mt-2">جدول الحصص الأسبوعي (زمن الحصة 50 دقيقة)</h2>
-                <p class="text-xs text-slate-500 mt-1">اختر الصف الدراسي ثم الفصل لعرض أو طباعة الجدول المخصص</p>
+                <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">الجدول المدرسي المعتمد 2026 / 2027</span>
+                <h2 class="text-2xl font-black text-slate-900 mt-2">جدول الحصص الأسبوعي (5 حصص يومياً)</h2>
+                <p class="text-xs text-slate-500 mt-1">زمن الحصة 50 دقيقة | فسحة 30 دقيقة بعد الحصة الرابعة</p>
             </div>
 
             <div class="flex justify-center gap-3 mb-5 no-print">
@@ -224,7 +270,7 @@
                 </div>
 
                 <div class="overflow-x-auto custom-scroll">
-                    <table class="w-full text-center border-collapse min-w-[780px]">
+                    <table class="w-full text-center border-collapse min-w-[820px]">
                         <thead>
                             <tr class="moe-navy text-white text-xs">
                                 <th class="p-3 border border-slate-700 w-28">اليوم / الحصة</th>
@@ -254,7 +300,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody id="scheduleTableBody" class="text-sm font-bold text-slate-800 divide-y divide-slate-200"></tbody>
+                        <tbody id="scheduleTableBody" class="text-xs sm:text-sm font-bold text-slate-800 divide-y divide-slate-200"></tbody>
                     </table>
                 </div>
             </div>
@@ -282,7 +328,7 @@
         </div>
     </section>
 
-    <!-- قسم الشكاوى والمقترحات -->
+    <!-- صندوق الشكاوى والمقترحات -->
     <section id="contact" class="py-12 px-4 max-w-4xl mx-auto no-print">
         <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
             <div class="moe-navy p-6 text-white text-center">
@@ -339,12 +385,12 @@
                 </p>
             </div>
             <div>
-                <h4 class="font-bold text-white text-sm mb-3 border-r-2 moe-gold-border pr-2">روابط سريعة</h4>
+                <h4 class="font-bold text-white text-sm mb-3 border-r-2 moe-gold-border pr-2">منصات وروابط تعليمية</h4>
                 <ul class="space-y-2 text-xs">
-                    <li><a href="#schedule" class="hover:text-amber-400 transition">جداول الفصول الدراسية</a></li>
+                    <li><button onclick="openExternalUrl('https://egy.app.spx-learning-square.com/login')" class="hover:text-amber-400 transition">منصة الثقافة المالية (Learning Square)</button></li>
+                    <li><button onclick="openExternalUrl('https://sprixportal.jp/')" class="hover:text-amber-400 transition">منصة البرمجة (Sprix Portal)</button></li>
                     <li><button onclick="openExternalUrl('https://studentbooks.moe.gov.eg/')" class="hover:text-amber-400 transition">بنك المعرفة المصري والكتب المدرسية</button></li>
-                    <li><a href="#honors" class="hover:text-amber-400 transition">لوحة الشرف والمتفوقين</a></li>
-                    <li><a href="#gallery" class="hover:text-amber-400 transition">معرض الأنشطة المدرسية</a></li>
+                    <li><a href="#schedule" class="hover:text-amber-400 transition">جداول الحصص المدرسية</a></li>
                 </ul>
             </div>
             <div>
@@ -360,7 +406,7 @@
         </div>
     </footer>
 
-    <!-- نافذة لوحة تحكم المسؤول -->
+    <!-- لوحة تحكم المسؤول -->
     <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-3 sm:p-4 no-print">
         <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl border-2 moe-gold-border overflow-hidden">
             
@@ -379,7 +425,7 @@
 
             <div class="p-4 sm:p-6 overflow-y-auto custom-scroll flex-1">
                 
-                <!-- شاشة تسجيل الدخول -->
+                <!-- تسجيل الدخول -->
                 <div id="adminLoginView" class="max-w-md mx-auto py-6 text-center space-y-4">
                     <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-2xl mx-auto">
                         <i class="fa-solid fa-lock"></i>
@@ -429,7 +475,7 @@
                         </div>
                     </div>
 
-                    <!-- شريط التبويبات -->
+                    <!-- التبويبات -->
                     <div class="flex overflow-x-auto custom-scroll gap-1 border-b border-slate-200 pb-1 text-xs font-bold">
                         <button onclick="switchAdminTab('tabSchedule')" id="btn_tabSchedule" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-amber-500 text-amber-700 bg-amber-50/60 whitespace-nowrap">
                             <i class="fa-solid fa-calendar-check ml-1"></i> تعديل الجدول
@@ -457,7 +503,7 @@
                         </button>
                     </div>
 
-                    <!-- 1. تبويب تعديل الجدول -->
+                    <!-- تبويب تعديل الجدول -->
                     <div id="tabSchedule" class="admin-tab-pane space-y-4">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
@@ -503,8 +549,8 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">اسم المادة الدراسية *</label>
-                                <input type="text" id="adminScheduleSubjectInput" placeholder="مثال: الفيزياء / اللغة العربية" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold">
+                                <label class="block text-xs font-bold text-slate-700 mb-1">اسم المادة والمعلم *</label>
+                                <input type="text" id="adminScheduleSubjectInput" placeholder="مثال: لغة عربية (أ/ طاهر)" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs font-bold">
                             </div>
                         </div>
 
@@ -513,11 +559,11 @@
                         </button>
                     </div>
 
-                    <!-- 2. تبويب رفع صورة للمعرض -->
+                    <!-- تبويب رفع صورة للمعرض -->
                     <div id="tabGallery" class="admin-tab-pane hidden space-y-4">
                         <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">اختر ملف الصورة من الموبايل أو الجهاز *</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">اختر ملف الصورة من الجهاز *</label>
                                 <input type="file" id="adminGalleryFileInput" accept="image/*" class="w-full text-xs bg-white p-2 rounded-xl border border-slate-300">
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -531,7 +577,7 @@
                                 </div>
                             </div>
                             <button onclick="stageNewGalleryImage()" class="w-full moe-gold-bg hover:bg-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs transition">
-                                <i class="fa-solid fa-plus ml-1"></i> إضافة الصورة للمعرض والسلايدر العلوي
+                                <i class="fa-solid fa-plus ml-1"></i> إضافة الصورة للمعرض والسلايدر
                             </button>
                         </div>
 
@@ -541,7 +587,7 @@
                         </div>
                     </div>
 
-                    <!-- 3. تبويب أقسام المعرض -->
+                    <!-- تبويب أقسام المعرض -->
                     <div id="tabCategories" class="admin-tab-pane hidden space-y-4">
                         <div class="flex gap-2">
                             <input type="text" id="newCategoryNameInput" placeholder="اكتب اسم قسم جديد" class="flex-1 px-3 py-2 rounded-xl border border-slate-300 text-xs">
@@ -552,7 +598,7 @@
                         <div id="adminCategoriesList" class="space-y-2"></div>
                     </div>
 
-                    <!-- 4. تبويب الأخبار العاجلة -->
+                    <!-- تبويب الأخبار العاجلة -->
                     <div id="tabNews" class="admin-tab-pane hidden space-y-4">
                         <div class="flex gap-2">
                             <input type="text" id="adminNewsInput" placeholder="اكتب نص الخبر العاجل أو التنويه..." class="flex-1 px-3 py-2 rounded-xl border border-slate-300 text-xs">
@@ -563,7 +609,7 @@
                         <div id="adminNewsListContainer" class="space-y-2"></div>
                     </div>
 
-                    <!-- 5. تبويب لوحة الشرف -->
+                    <!-- تبويب لوحة الشرف -->
                     <div id="tabHonors" class="admin-tab-pane hidden space-y-4">
                         <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-3">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -576,7 +622,7 @@
                                     <input type="text" id="honorRankInput" placeholder="مثال: المركز الأول" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">الصف / الشعبة *</label>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">الصف الدراسي *</label>
                                     <input type="text" id="honorGradeInput" placeholder="مثال: الصف الثاني الثانوي" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
                                 </div>
                                 <div>
@@ -595,12 +641,12 @@
                         <div id="adminHonorsList" class="space-y-2 max-h-52 overflow-y-auto custom-scroll"></div>
                     </div>
 
-                    <!-- 6. تبويب الشكاوى -->
+                    <!-- تبويب الشكاوى -->
                     <div id="tabComplaints" class="admin-tab-pane hidden space-y-3">
                         <div id="adminComplaintsList" class="space-y-2.5 max-h-72 overflow-y-auto custom-scroll"></div>
                     </div>
 
-                    <!-- 7. تبويب المزامنة السحابية للجميع -->
+                    <!-- تبويب المزامنة السحابية للجميع -->
                     <div id="tabCloud" class="admin-tab-pane hidden space-y-4">
                         <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-200 space-y-3">
                             <h5 class="font-black text-emerald-950 text-sm flex items-center gap-2">
@@ -613,7 +659,10 @@
                             </div>
                             <div class="flex flex-wrap gap-2">
                                 <button onclick="saveFirebaseUrlAndSync()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black transition">
-                                    <i class="fa-solid fa-link ml-1"></i> مزامنة ورفع البيانات الحالية للجميع الآن
+                                    <i class="fa-solid fa-link ml-1"></i> مزامنة ورفع الجداول الجديدة للجميع الآن
+                                </button>
+                                <button onclick="resetSchedulesToOfficialDefault()" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-black transition">
+                                    <i class="fa-solid fa-rotate ml-1"></i> استعادة الجدول الرسمي الأصلي
                                 </button>
                                 <button onclick="pullFromCloudNow()" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold transition">
                                     <i class="fa-solid fa-cloud-arrow-down ml-1"></i> جلب آخر التحديثات من السحابة
@@ -623,7 +672,7 @@
                         </div>
                     </div>
 
-                    <!-- 8. تبويب أمان الإدارة -->
+                    <!-- تبويب أمان الإدارة -->
                     <div id="tabSecurity" class="admin-tab-pane hidden space-y-3">
                         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
                             <h5 class="text-xs font-black text-slate-800">تغيير كلمة مرور المسؤول</h5>
@@ -634,7 +683,7 @@
                         </div>
                     </div>
 
-                    <!-- زر الحفظ النهائي الثابت أسفل لوحة التحكم -->
+                    <!-- زر الحفظ النهائي الثابت -->
                     <div class="pt-3 border-t border-slate-200 flex justify-between items-center gap-3">
                         <span id="draftFooterIndicator" class="text-xs font-bold text-slate-500">لا توجد تعديلات معلقة حالياً</span>
                         <button onclick="commitAllAdminChanges()" class="px-6 py-2.5 rounded-xl moe-navy hover:bg-slate-800 text-amber-400 font-black text-xs shadow-lg transition flex items-center gap-2">
@@ -648,8 +697,8 @@
     </div>
 
     <script>
-        // رابط قاعدة البيانات السحابية المدمج لمشروع rabaa-school
         const DEFAULT_FIREBASE_DB_URL = "https://rabaa-school-default-rtdb.firebaseio.com";
+        const SCHEDULE_VERSION = "v4_official_2026";
 
         function getFirebaseDbUrl() {
             const saved = localStorage.getItem('rabaa_firebase_url_v1') || DEFAULT_FIREBASE_DB_URL;
@@ -660,8 +709,9 @@
 
         const defaultNews = [
             'انتظام الدراسة بمدرسة رابعة الثانوية المشتركة والالتزام بالحضور في طابور الصباح الساعة 7:45 صباحاً.',
-            'تم تعديل زمن الحصة الدراسية إلى 50 دقيقة مع تخصيص 30 دقيقة للفسحة بعد الحصة الرابعة.',
-            'يمكن لجميع الطلاب تحميل الكتب المدرسية والتقييمات الأسبوعية عبر بطاقة بنك المعرفة المصري بالموقع.'
+            'تم اعتماد جدول الحصص الرسمي الجديد (5 حصص يومياً بزمن 50 دقيقة للحصة + 30 دقيقة فسحة بعد الحصة الرابعة).',
+            'متاح الآن لجميع الطلاب الدخول المباشر لمنصة الثقافة المالية ومنصة البرمجة (Sprix) عبر قسم الخدمات.',
+            'يمكن تحميل الكتب المدرسية والتقييمات الأسبوعية عبر بطاقة بنك المعرفة المصري بالموقع.'
         ];
 
         const defaultCategories = ['طابور الصباح', 'أنشطة رياضية', 'معامل التطوير'];
@@ -689,41 +739,98 @@
 
         const defaultHonors = [
             { id: 'h1', name: 'أحمد محمد إبراهيم', rank: 'المركز الأول', grade: 'الصف الأول الثانوي', score: '98.8%', photo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80' },
-            { id: 'h2', name: 'مريم محمود حسن', rank: 'المركز الثاني', grade: 'الصف الثاني الثانوي - علمي', score: '97.9%', photo: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80' },
-            { id: 'h3', name: 'عمر خالد سليمان', rank: 'المركز الأول', grade: 'الصف الثاني الثانوي - أدبي', score: '96.5%', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80' },
+            { id: 'h2', name: 'مريم محمود حسن', rank: 'المركز الثاني', grade: 'الصف الثاني الثانوي', score: '97.9%', photo: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80' },
+            { id: 'h3', name: 'عمر خالد سليمان', rank: 'المركز الأول', grade: 'الصف الثاني الثانوي', score: '96.5%', photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80' },
             { id: 'h4', name: 'نورهان طارق علي', rank: 'الطالبة المثالية', grade: 'الصف الأول الثانوي', score: '96.2%', photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80' }
         ];
 
-        function buildDefaultSchedules() {
-            const data = {};
-            const g1Base = [
-                ['اللغة العربية', 'اللغة الإنجليزية', 'العلوم المتكاملة', 'الرياضيات', 'الفلسفة والمنطق'],
-                ['الرياضيات', 'التاريخ', 'اللغة العربية', 'اللغة الإنجليزية', 'تربية رياضية'],
-                ['العلوم المتكاملة', 'اللغة الفرنسية', 'الرياضيات', 'التاريخ', 'تربية دينية'],
-                ['اللغة الإنجليزية', 'اللغة العربية', 'الفلسفة والمنطق', 'حاسب آلي', 'نشاط علمي'],
-                ['التاريخ', 'العلوم المتكاملة', 'اللغة الفرنسية', 'اللغة العربية', 'مكتبة وبحث']
-            ];
-            const g2Base = [
-                ['اللغة العربية', 'الفيزياء', 'الرياضيات التطبيقية', 'اللغة الإنجليزية', 'الكيمياء'],
-                ['الكيمياء', 'اللغة الإنجليزية', 'الأحياء', 'اللغة العربية', 'تربية رياضية'],
-                ['الرياضيات البحتة', 'اللغة الفرنسية', 'الفيزياء', 'الكيمياء', 'تربية دينية'],
-                ['الأحياء', 'اللغة العربية', 'اللغة الإنجليزية', 'الرياضيات البحتة', 'تكنولوجيا معلومات'],
-                ['الفيزياء', 'الرياضيات التطبيقية', 'اللغة الفرنسية', 'الأحياء', 'نشاط طلابي']
-            ];
-            for (let c = 1; c <= 5; c++) {
-                data[`1-${c}`] = JSON.parse(JSON.stringify(g1Base));
-                data[`2-${c}`] = JSON.parse(JSON.stringify(g2Base));
-            }
-            return data;
+        // الجداول المدرسية المعتمدة لجميع الفصول (أول 5 حصص لكل يوم مع أسماء المعلمين)
+        function buildOfficialSchedules() {
+            return {
+                // الصف الأول الثانوي (5 فصول)
+                "1-1": [
+                    ["لغة عربية (أ/ طاهر)", "لغة إنجليزية (أ/ منار)", "رياضيات (أ/ شيماء)", "تاريخ (أ/ منى)", "علوم متكاملة (أ/ تامر)"],
+                    ["علوم متكاملة (أ/ تامر)", "برمجة (أ/ عبد الرحمن)", "فلسفة (أ/ سهام)", "لغة فرنسية (أ/ سوسن)", "رياضيات (أ/ شيماء)"],
+                    ["علوم متكاملة (أ/ تامر)", "دين (أ/ طاهر)", "لغة عربية (أ/ طاهر)", "تاريخ (أ/ منى)", "تاريخ (أ/ منى)"],
+                    ["لغة إنجليزية (أ/ منار)", "لغة عربية (أ/ طاهر)", "برمجة (أ/ عبد الرحمن)", "فلسفة (أ/ سهام)", "علوم متكاملة (أ/ تامر)"],
+                    ["لغة عربية (أ/ طاهر)", "لغة إنجليزية (أ/ منار)", "تاريخ (أ/ منى)", "رياضيات (أ/ شيماء)", "دين (أ/ طاهر)"]
+                ],
+                "1-2": [
+                    ["علوم متكاملة (أ/ تامر)", "فلسفة (أ/ سهام)", "رياضيات (أ/ صبري)", "دين (أ/ طاهر)", "لغة إنجليزية (أ/ منار)"],
+                    ["فلسفة (أ/ سهام)", "علوم متكاملة (أ/ تامر)", "لغة إنجليزية (أ/ منار)", "لغة عربية (أ/ طاهر)", "فلسفة (أ/ سهام)"],
+                    ["فلسفة (أ/ سهام)", "علوم متكاملة (أ/ تامر)", "برمجة (أ/ عبد الرحمن)", "لغة عربية (أ/ طاهر)", "تاريخ (أ/ منى)"],
+                    ["لغة عربية (أ/ طاهر)", "علوم متكاملة (أ/ تامر)", "تاريخ (أ/ منى)", "رياضيات (أ/ صبري)", "لغة إنجليزية (أ/ منار)"],
+                    ["لغة فرنسية (أ/ سمير)", "رياضيات (أ/ صبري)", "دين (أ/ طاهر)", "لغة عربية (أ/ طاهر)", "تاريخ (أ/ منى)"]
+                ],
+                "1-3": [
+                    ["فلسفة (أ/ سهام)", "تاريخ (أ/ منى)", "علوم متكاملة (أ/ تامر)", "رياضيات (أ/ صبري)", "لغة عربية (أ/ حسن)"],
+                    ["لغة إنجليزية (أ/ منار)", "فلسفة (أ/ سهام)", "لغة فرنسية (أ/ سمير)", "علوم متكاملة (أ/ تامر)", "لغة عربية (أ/ حسن)"],
+                    ["دين (أ/ طاهر)", "فلسفة (أ/ سهام)", "علوم متكاملة (أ/ تامر)", "رياضيات (أ/ صبري)", "لغة عربية (أ/ حسن)"],
+                    ["تاريخ (أ/ منى)", "لغة إنجليزية (أ/ منار)", "علوم متكاملة (أ/ تامر)", "برمجة (أ/ عبد الرحمن)", "رياضيات (أ/ صبري)"],
+                    ["رياضيات (أ/ صبري)", "دين (أ/ طاهر)", "لغة إنجليزية (أ/ منار)", "تاريخ (أ/ منى)", "لغة عربية (أ/ حسن)"]
+                ],
+                "1-4": [
+                    ["تاريخ (أ/ منى)", "رياضيات (أ/ صبري)", "لغة فرنسية (أ/ سمير)", "فلسفة (أ/ سهام)", "علوم متكاملة (أ/ رشاد)"],
+                    ["دين (أ/ طاهر)", "لغة إنجليزية (أ/ منار)", "لغة عربية (أ/ حسن)", "فلسفة (أ/ سهام)", "برمجة (أ/ هيثم)"],
+                    ["تاريخ (أ/ منى)", "لغة عربية (أ/ حسن)", "برمجة (أ/ هيثم)", "علوم متكاملة (أ/ رشاد)", "رياضيات (أ/ صبري)"],
+                    ["علوم متكاملة (أ/ رشاد)", "لغة عربية (أ/ حسن)", "لغة إنجليزية (أ/ منار)", "دين (أ/ طاهر)", "فلسفة (أ/ سهام)"],
+                    ["لغة إنجليزية (أ/ منار)", "تاريخ (أ/ منى)", "رياضيات (أ/ صبري)", "لغة عربية (أ/ حسن)", "علوم متكاملة (أ/ رشاد)"]
+                ],
+                "1-5": [
+                    ["لغة عربية (أ/ حسن)", "فلسفة", "علوم متكاملة (أ/ رشاد)", "فلسفة", "رياضيات (أ/ شيماء)"],
+                    ["دين (أ/ حسن)", "لغة عربية (أ/ حسن)", "رياضيات (أ/ شيماء)", "برمجة (أ/ هيثم)", "لغة إنجليزية (أ/ منار)"],
+                    ["لغة عربية (أ/ حسن)", "فلسفة", "تاريخ (أ/ منى)", "لغة فرنسية (أ/ سمير)", "برمجة (أ/ هيثم)"],
+                    ["لغة عربية (أ/ حسن)", "رياضيات (أ/ شيماء)", "علوم متكاملة (أ/ رشاد)", "لغة إنجليزية (أ/ منار)", "تاريخ (أ/ منى)"],
+                    ["تاريخ (أ/ منى)", "لغة عربية (أ/ حسن)", "دين (أ/ حسن)", "علوم متكاملة (أ/ رشاد)", "لغة إنجليزية (أ/ منار)"]
+                ],
+
+                // الصف الثاني الثانوي (5 فصول عامة: 2/1 حتى 2/5)
+                "2-1": [
+                    ["لغة إنجليزية (أ/ محمود)", "تاريخ (أ/ سالم)", "ثقافة مالية", "لغة عربية (أ/ همت)", "مادة اختيارية (أ/ عبد الرحمن / نور)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "لغة عربية (أ/ همت)", "تاريخ (أ/ سالم)", "لغة إنجليزية (أ/ محمود)", "لغة عربية (أ/ همت)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "تاريخ (أ/ سالم)", "ثقافة مالية", "لغة عربية (أ/ همت)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "لغة إنجليزية (أ/ محمود)", "تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)"],
+                    ["تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)", "تربية رياضية (أ/ عاطف)", "نشاط"]
+                ],
+                "2-2": [
+                    ["تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)", "تاريخ (أ/ سالم)", "لغة إنجليزية (أ/ محمود)", "مادة اختيارية (أ/ عبد الرحمن / نور)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "تاريخ (أ/ سالم)", "ثقافة مالية", "لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "تربية رياضية (أ/ عاطف)", "لغة عربية (أ/ همت)", "تاريخ (أ/ سالم)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)"],
+                    ["لغة إنجليزية (أ/ محمود)", "ثقافة مالية", "تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)", "نشاط"]
+                ],
+                "2-3": [
+                    ["لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)", "ثقافة مالية", "تاريخ (أ/ سالم)", "مادة اختيارية (أ/ عبد الرحمن / نور)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "ثقافة مالية", "لغة عربية (أ/ همت)", "تاريخ (أ/ سالم)", "نشاط"],
+                    ["تاريخ (أ/ سالم)", "لغة عربية (أ/ همت)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "لغة إنجليزية (أ/ محمود)"],
+                    ["مادة اختيارية (أ/ عبد الرحمن / نور)", "مادة اختيارية (أ/ عبد الرحمن / نور)", "لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)", "تاريخ (أ/ سالم)"],
+                    ["لغة عربية (أ/ همت)", "لغة إنجليزية (أ/ محمود)", "تربية رياضية (أ/ عاطف)", "تاريخ (أ/ سالم)", "نشاط"]
+                ],
+                "2-4": [
+                    ["رياضيات (أ/ شيماء)", "لغة عربية (أ/ رمضان)", "كيمياء (أ/ ريم)", "تاريخ (أ/ يارا)", "كيمياء (أ/ ريم)"],
+                    ["لغة عربية (أ/ رمضان)", "فيزياء", "تاريخ (أ/ يارا)", "رياضيات (أ/ شيماء)", "فيزياء"],
+                    ["تاريخ (أ/ يارا)", "دين (أ/ رمضان)", "مواطنة", "لغة عربية (أ/ رمضان)", "لغة فرنسية (أ/ سوسن)"],
+                    ["لغة إنجليزية (أ/ محمود)", "كيمياء (أ/ ريم)", "رياضيات (أ/ شيماء)", "لغة عربية (أ/ رمضان)", "كيمياء (أ/ ريم)"],
+                    ["فيزياء", "فيزياء", "رياضيات (أ/ شيماء)", "لغة إنجليزية (أ/ محمود)", "لغة عربية (أ/ رمضان)"]
+                ],
+                "2-5": [
+                    ["لغة عربية (أ/ رمضان)", "كيمياء (أ/ ريم)", "دين (أ/ رمضان)", "رياضيات (أ/ شيماء)", "تاريخ (أ/ يارا)"],
+                    ["تاريخ (أ/ يارا)", "رياضيات (أ/ شيماء)", "فيزياء", "فيزياء", "لغة عربية (أ/ رمضان)"],
+                    ["لغة عربية (أ/ رمضان)", "تاريخ (أ/ يارا)", "لغة فرنسية (أ/ سوسن)", "مواطنة", "دين (أ/ رمضان)"],
+                    ["كيمياء (أ/ ريم)", "لغة إنجليزية (أ/ محمود)", "لغة عربية (أ/ رمضان)", "كيمياء (أ/ ريم)", "رياضيات (أ/ شيماء)"],
+                    ["تاريخ (أ/ يارا)", "لغة عربية (أ/ رمضان)", "فيزياء", "لغة فرنسية (أ/ سوسن)", "رياضيات (أ/ شيماء)"]
+                ]
+            };
         }
 
         let liveState = {
-            schedules: JSON.parse(localStorage.getItem('rabaa_schedules_v2')) || buildDefaultSchedules(),
-            news: JSON.parse(localStorage.getItem('rabaa_news_v2')) || defaultNews,
-            categories: JSON.parse(localStorage.getItem('rabaa_cats_v2')) || defaultCategories,
-            gallery: JSON.parse(localStorage.getItem('rabaa_gallery_v2')) || defaultGallery,
-            honors: JSON.parse(localStorage.getItem('rabaa_honors_v2')) || defaultHonors,
-            complaints: JSON.parse(localStorage.getItem('rabaa_complaints_v2')) || []
+            scheduleVersion: SCHEDULE_VERSION,
+            schedules: JSON.parse(localStorage.getItem('rabaa_schedules_v4')) || buildOfficialSchedules(),
+            news: JSON.parse(localStorage.getItem('rabaa_news_v4')) || defaultNews,
+            categories: JSON.parse(localStorage.getItem('rabaa_cats_v4')) || defaultCategories,
+            gallery: JSON.parse(localStorage.getItem('rabaa_gallery_v4')) || defaultGallery,
+            honors: JSON.parse(localStorage.getItem('rabaa_honors_v4')) || defaultHonors,
+            complaints: JSON.parse(localStorage.getItem('rabaa_complaints_v4')) || []
         };
 
         let draftState = null;
@@ -743,7 +850,8 @@
                 const res = await fetch(`${dbUrl}/school_portal_data.json`);
                 if (res.ok) {
                     const cloudData = await res.json();
-                    if (cloudData) {
+                    // إذا كانت السحابة تحتوي على إصدار الجدول الجديد نستخدمها، وإلا نرفع الجدول الرسمي الجديد للسحابة فوراً
+                    if (cloudData && cloudData.scheduleVersion === SCHEDULE_VERSION) {
                         if (cloudData.schedules) liveState.schedules = cloudData.schedules;
                         if (cloudData.news) liveState.news = cloudData.news;
                         if (cloudData.categories) liveState.categories = cloudData.categories;
@@ -752,6 +860,17 @@
                         if (cloudData.complaints) liveState.complaints = cloudData.complaints;
                         saveLiveToLocalStorage();
                         renderAllPublicSections();
+                    } else {
+                        // الحفاظ على الصور والشكاوى القديمة إن وجدت مع ترقية الجدول للإصدار الجديد
+                        if (cloudData) {
+                            if (cloudData.gallery && cloudData.gallery.length) liveState.gallery = cloudData.gallery;
+                            if (cloudData.complaints && cloudData.complaints.length) liveState.complaints = cloudData.complaints;
+                        }
+                        liveState.scheduleVersion = SCHEDULE_VERSION;
+                        liveState.schedules = buildOfficialSchedules();
+                        saveLiveToLocalStorage();
+                        renderAllPublicSections();
+                        await pushLiveStateToCloud();
                     }
                     document.getElementById('cloudStatusBanner').classList.remove('hidden');
                 }
@@ -764,6 +883,7 @@
             const dbUrl = getFirebaseDbUrl();
             if (!dbUrl) return false;
             try {
+                liveState.scheduleVersion = SCHEDULE_VERSION;
                 const res = await fetch(`${dbUrl}/school_portal_data.json`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
@@ -779,6 +899,17 @@
             return false;
         }
 
+        async function resetSchedulesToOfficialDefault() {
+            if (!confirm('هل تريد استعادة الجدول الرسمي الأصلي لجميع الفصول ومزامنته للجميع؟')) return;
+            liveState.schedules = buildOfficialSchedules();
+            if (draftState) draftState.schedules = JSON.parse(JSON.stringify(liveState.schedules));
+            saveLiveToLocalStorage();
+            renderAllPublicSections();
+            if (isAdminLoggedIn) renderAllAdminLists();
+            await pushLiveStateToCloud();
+            alert('تم استعادة الجدول الرسمي ومزامنته بنجاح!');
+        }
+
         async function saveFirebaseUrlAndSync() {
             const urlInput = document.getElementById('firebaseDbUrlInput').value.trim();
             const statusEl = document.getElementById('cloudConfigStatusMsg');
@@ -788,11 +919,11 @@
                 return;
             }
             localStorage.setItem('rabaa_firebase_url_v1', urlInput);
-            statusEl.textContent = 'جاري الاتصال بالسحابة ومزامنة البيانات للجميع...';
+            statusEl.textContent = 'جاري الاتصال بالسحابة ومزامنة الجداول الجديدة للجميع...';
             statusEl.className = 'text-xs font-bold text-amber-600';
             const ok = await pushLiveStateToCloud();
             if (ok) {
-                statusEl.textContent = 'تم الربط السحابي بنجاح! أي تعديل تحفظه يظهر عند كل الزوار فوراً.';
+                statusEl.textContent = 'تم الربط السحابي بنجاح! الجداول الجديدة تظهر عند كل الزوار فوراً.';
                 statusEl.className = 'text-xs font-bold text-emerald-700';
             } else {
                 statusEl.textContent = 'تعذر الكتابة في الرابط، تأكد من تفعيل Rules على true.';
@@ -810,12 +941,12 @@
         }
 
         function saveLiveToLocalStorage() {
-            localStorage.setItem('rabaa_schedules_v2', JSON.stringify(liveState.schedules));
-            localStorage.setItem('rabaa_news_v2', JSON.stringify(liveState.news));
-            localStorage.setItem('rabaa_cats_v2', JSON.stringify(liveState.categories));
-            localStorage.setItem('rabaa_gallery_v2', JSON.stringify(liveState.gallery));
-            localStorage.setItem('rabaa_honors_v2', JSON.stringify(liveState.honors));
-            localStorage.setItem('rabaa_complaints_v2', JSON.stringify(liveState.complaints));
+            localStorage.setItem('rabaa_schedules_v4', JSON.stringify(liveState.schedules));
+            localStorage.setItem('rabaa_news_v4', JSON.stringify(liveState.news));
+            localStorage.setItem('rabaa_cats_v4', JSON.stringify(liveState.categories));
+            localStorage.setItem('rabaa_gallery_v4', JSON.stringify(liveState.gallery));
+            localStorage.setItem('rabaa_honors_v4', JSON.stringify(liveState.honors));
+            localStorage.setItem('rabaa_complaints_v4', JSON.stringify(liveState.complaints));
         }
 
         function openExternalUrl(url) {
@@ -887,7 +1018,7 @@
             const gradeTitle = selectedGrade === 1 ? 'الصف الأول الثانوي' : 'الصف الثاني الثانوي';
             document.getElementById('currentScheduleTitle').textContent = `${gradeTitle} - فصل (${selectedGrade} / ${selectedClass})`;
 
-            const matrix = liveState.schedules[key] || buildDefaultSchedules()[key];
+            const matrix = liveState.schedules[key] || buildOfficialSchedules()[key];
             const tbody = document.getElementById('scheduleTableBody');
 
             tbody.innerHTML = daysList.map((dayName, dIdx) => {
@@ -901,7 +1032,7 @@
                     <td class="p-3 border border-amber-200 bg-amber-50/70 text-amber-900 font-extrabold text-xs">
                         <i class="fa-solid fa-bell text-amber-600 ml-1"></i> فسحة (30 د)
                     </td>
-                    <td class="p-3 border border-slate-200">${row[4]}</td>
+                    <td class="p-3 border border-slate-200 font-bold text-slate-900 bg-slate-50/50">${row[4]}</td>
                 </tr>`;
             }).join('');
         }
