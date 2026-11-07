@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; overflow-x: hidden; }
+        body { font-family: 'Cairo', sans-serif; background-color: #f8fafc; overflow-x: hidden; scroll-behavior: smooth; }
         .moe-navy { background-color: #0b1f3a; }
         .moe-navy-light { background-color: #13315c; }
         .moe-gold { color: #d4af37; }
@@ -58,26 +58,28 @@
     </div>
 
     <!-- الهيدر الرئيسي -->
-    <header class="bg-white shadow-md border-b-4 moe-gold-border no-print">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
-            <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-full moe-navy flex items-center justify-center border-2 moe-gold-border shadow-inner shrink-0">
-                    <i class="fa-solid fa-graduation-cap text-2xl moe-gold"></i>
+    <header class="bg-white shadow-md border-b-4 moe-gold-border no-print sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-full moe-navy flex items-center justify-center border-2 moe-gold-border shadow-inner shrink-0">
+                    <i class="fa-solid fa-graduation-cap text-xl sm:text-2xl moe-gold"></i>
                 </div>
                 <div>
-                    <div class="text-xs font-bold text-amber-700 tracking-wide">جمهورية مصر العربية - محافظة شمال سيناء</div>
-                    <h1 class="text-xl sm:text-2xl font-black text-slate-900">مدرسة رابعة الثانوية المشتركة</h1>
-                    <p class="text-xs text-slate-500 font-semibold">البوابة الإلكترونية الرسمية والخدمات الطلابية</p>
+                    <div class="text-[11px] font-bold text-amber-700 tracking-wide">جمهورية مصر العربية - محافظة شمال سيناء</div>
+                    <h1 class="text-lg sm:text-2xl font-black text-slate-900">مدرسة رابعة الثانوية المشتركة</h1>
+                    <p class="text-[11px] text-slate-500 font-semibold">البوابة الإلكترونية الرسمية والخدمات الطلابية</p>
                 </div>
             </div>
 
-            <nav class="flex flex-wrap items-center gap-1 sm:gap-2 text-sm font-bold">
-                <a href="#hero" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الرئيسية</a>
-                <a href="#services" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الخدمات والمنصات</a>
-                <a href="#schedule" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">جداول الحصص</a>
-                <a href="#honors" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">لوحة الشرف</a>
-                <a href="#gallery" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">معرض المدرسة</a>
-                <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الشكاوى والمقترحات</a>
+            <nav class="flex flex-wrap items-center gap-1 text-xs sm:text-sm font-bold">
+                <a href="#hero" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الرئيسية</a>
+                <a href="#services" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">المنصات</a>
+                <a href="#posts" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">أخبار المدرسة</a>
+                <a href="#schedule" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الجداول</a>
+                <a href="#teachers" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">هيئة التدريس</a>
+                <a href="#honors" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">لوحة الشرف</a>
+                <a href="#gallery" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">المعرض</a>
+                <a href="#contact" class="px-2.5 py-2 rounded-lg hover:bg-slate-100 text-slate-700 transition">الشكاوى</a>
             </nav>
         </div>
     </header>
@@ -86,7 +88,7 @@
     <div class="moe-navy-light text-white py-2.5 px-4 shadow-inner border-b border-slate-700 no-print">
         <div class="max-w-7xl mx-auto flex items-center gap-3">
             <span class="moe-gold-bg text-slate-950 font-black text-xs px-3 py-1 rounded shadow shrink-0 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> تنويهات المدرسة
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-ping"></span> تنويهات عاجلة
             </span>
             <div class="ticker-wrap flex-1 text-sm font-semibold text-amber-100">
                 <div id="newsTickerContent" class="ticker-move"></div>
@@ -111,8 +113,8 @@
                     <a href="#schedule" class="moe-gold-bg hover:bg-amber-500 text-slate-950 font-black px-6 py-3 rounded-xl shadow-lg transition flex items-center gap-2 text-sm">
                         <i class="fa-solid fa-calendar-days"></i> جدول الحصص الجديد
                     </a>
-                    <a href="#services" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-laptop-code"></i> المنصات الإلكترونية
+                    <a href="#posts" class="bg-slate-800/80 hover:bg-slate-700 border border-slate-600 text-white font-bold px-6 py-3 rounded-xl transition flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-bullhorn text-amber-400"></i> منشورات وأخبار المدرسة
                     </a>
                 </div>
             </div>
@@ -145,14 +147,14 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- 1. منصة الثقافة المالية -->
-            <div onclick="openExternalUrl('https://egy.app.spx-learning-square.com/login')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-emerald-500 transition group flex flex-col justify-between">
+            <a href="https://egy.app.spx-learning-square.com/login" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-emerald-500 transition group flex flex-col justify-between block">
                 <div>
                     <div class="w-12 h-12 rounded-xl bg-emerald-950 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
                         <i class="fa-solid fa-coins"></i>
                     </div>
                     <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
                         <span>منصة الثقافة المالية</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-emerald-600"></i>
+                        <i class="fa-solid fa-arrow-left text-xs text-emerald-600"></i>
                     </h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
                         المنصة التعليمية للثقافة المالية والأنشطة التفاعلية للطلاب (Learning Square) لتطوير المهارات الاقتصادية.
@@ -161,17 +163,17 @@
                 <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-emerald-700">
                     تسجيل الدخول للمنصة <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
-            </div>
+            </a>
 
             <!-- 2. منصة البرمجة -->
-            <div onclick="openExternalUrl('https://sprixportal.jp/')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-cyan-500 transition group flex flex-col justify-between">
+            <a href="https://sprixportal.jp/" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-cyan-500 transition group flex flex-col justify-between block">
                 <div>
                     <div class="w-12 h-12 rounded-xl bg-cyan-950 text-cyan-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
                         <i class="fa-solid fa-code"></i>
                     </div>
                     <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
                         <span>منصة البرمجة (Sprix)</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-cyan-600"></i>
+                        <i class="fa-solid fa-arrow-left text-xs text-cyan-600"></i>
                     </h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
                         بوابة التعلّم واختبارات البرمجة التفاعلية (Sprix Portal) لتنمية المهارات التكنولوجية والحوسبة للطلاب.
@@ -180,17 +182,17 @@
                 <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-cyan-700">
                     دخول منصة Sprix <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
-            </div>
+            </a>
 
             <!-- 3. بنك المعرفة والكتب المدرسية -->
-            <div onclick="openExternalUrl('https://studentbooks.moe.gov.eg/')" class="cursor-pointer bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between">
+            <a href="https://studentbooks.moe.gov.eg/" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between block">
                 <div>
                     <div class="w-12 h-12 rounded-xl moe-navy text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
                         <i class="fa-solid fa-book-open-reader"></i>
                     </div>
                     <h3 class="text-lg font-black text-slate-900 mb-2 flex items-center justify-between">
                         <span>بنك المعرفة والكتب</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-amber-600"></i>
+                        <i class="fa-solid fa-arrow-left text-xs text-amber-600"></i>
                     </h3>
                     <p class="text-xs text-slate-600 leading-relaxed mb-4">
                         تحميل المناهج الدراسية الإلكترونية والتقييمات الأسبوعية والأداءات الصفية من موقع وزارة التربية والتعليم مباشرة.
@@ -199,7 +201,7 @@
                 <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-amber-700">
                     فتح منصة المناهج <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
-            </div>
+            </a>
 
             <!-- 4. جداول الفصول الدراسية -->
             <a href="#schedule" class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border-2 border-transparent hover:border-amber-500 transition group flex flex-col justify-between block">
@@ -232,6 +234,19 @@
                     إرسال رسالة للإدارة <i class="fa-solid fa-chevron-left text-[10px]"></i>
                 </span>
             </a>
+        </div>
+    </section>
+
+    <!-- قسم جديد: أخبار ومنشورات المدرسة (بنظام بطاقات التعليقات) -->
+    <section id="posts" class="py-12 px-4 bg-white border-t border-slate-200 no-print">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">المركز الإعلامي والتنويهات</span>
+                <h2 class="text-2xl font-black text-slate-900 mt-2">أخبار ومنشورات المدرسة</h2>
+                <p class="text-xs text-slate-500 mt-1">أحدث البيانات، القرارات الإدارية، والرسائل الموجهة للطلاب وأولياء الأمور</p>
+            </div>
+
+            <div id="schoolPostsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </section>
 
@@ -307,13 +322,25 @@
         </div>
     </section>
 
-    <!-- لوحة الشرف والمتفوقين -->
-    <section id="honors" class="py-12 px-4 max-w-7xl mx-auto no-print">
+    <!-- قسم جديد: هيئة التدريس والمعلمين -->
+    <section id="teachers" class="py-12 px-4 max-w-7xl mx-auto no-print">
         <div class="text-center mb-8">
-            <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full">فرسان المدرسة</span>
-            <h2 class="text-2xl font-black text-slate-900 mt-2">لوحة الشرف وأوائل الطلاب</h2>
+            <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full">الكادر التعليمي والتربوي</span>
+            <h2 class="text-2xl font-black text-slate-900 mt-2">هيئة التدريس ومعلمو المدرسة</h2>
+            <p class="text-xs text-slate-500 mt-1">نخبة من المعلمين المتخصصين بمدرسة رابعة الثانوية المشتركة</p>
         </div>
-        <div id="honorsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        <div id="teachersGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+    </section>
+
+    <!-- لوحة الشرف والمتفوقين -->
+    <section id="honors" class="py-12 px-4 bg-white border-t border-slate-200 no-print">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="text-xs font-black text-amber-700 bg-amber-100 px-3 py-1 rounded-full">فرسان المدرسة</span>
+                <h2 class="text-2xl font-black text-slate-900 mt-2">لوحة الشرف وأوائل الطلاب</h2>
+            </div>
+            <div id="honorsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+        </div>
     </section>
 
     <!-- معرض الصور والأنشطة -->
@@ -387,9 +414,9 @@
             <div>
                 <h4 class="font-bold text-white text-sm mb-3 border-r-2 moe-gold-border pr-2">منصات وروابط تعليمية</h4>
                 <ul class="space-y-2 text-xs">
-                    <li><button onclick="openExternalUrl('https://egy.app.spx-learning-square.com/login')" class="hover:text-amber-400 transition">منصة الثقافة المالية (Learning Square)</button></li>
-                    <li><button onclick="openExternalUrl('https://sprixportal.jp/')" class="hover:text-amber-400 transition">منصة البرمجة (Sprix Portal)</button></li>
-                    <li><button onclick="openExternalUrl('https://studentbooks.moe.gov.eg/')" class="hover:text-amber-400 transition">بنك المعرفة المصري والكتب المدرسية</button></li>
+                    <li><a href="https://egy.app.spx-learning-square.com/login" class="hover:text-amber-400 transition">منصة الثقافة المالية (Learning Square)</a></li>
+                    <li><a href="https://sprixportal.jp/" class="hover:text-amber-400 transition">منصة البرمجة (Sprix Portal)</a></li>
+                    <li><a href="https://studentbooks.moe.gov.eg/" class="hover:text-amber-400 transition">بنك المعرفة المصري والكتب المدرسية</a></li>
                     <li><a href="#schedule" class="hover:text-amber-400 transition">جداول الحصص المدرسية</a></li>
                 </ul>
             </div>
@@ -408,14 +435,14 @@
 
     <!-- لوحة تحكم المسؤول -->
     <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden items-center justify-center p-3 sm:p-4 no-print">
-        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl border-2 moe-gold-border overflow-hidden">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl border-2 moe-gold-border overflow-hidden">
             
             <div class="moe-navy text-white p-4 flex justify-between items-center shrink-0">
                 <div class="flex items-center gap-2.5">
                     <i class="fa-solid fa-shield-halved text-xl moe-gold"></i>
                     <div>
                         <h3 class="font-black text-sm sm:text-base">لوحة تحكم إدارة مدرسة رابعة الثانوية</h3>
-                        <p class="text-[11px] text-slate-300">نظام إدارة المحتوى، الجداول، والمزامنة السحابية للجميع</p>
+                        <p class="text-[11px] text-slate-300">نظام إدارة المحتوى، الأخبار، المعلمين، الجداول، والمزامنة السحابية</p>
                     </div>
                 </div>
                 <button onclick="attemptCloseAdminModal()" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-red-600 text-white flex items-center justify-center transition">
@@ -480,14 +507,20 @@
                         <button onclick="switchAdminTab('tabSchedule')" id="btn_tabSchedule" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-amber-500 text-amber-700 bg-amber-50/60 whitespace-nowrap">
                             <i class="fa-solid fa-calendar-check ml-1"></i> تعديل الجدول
                         </button>
+                        <button onclick="switchAdminTab('tabPosts')" id="btn_tabPosts" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
+                            <i class="fa-solid fa-comments ml-1"></i> منشورات الأخبار
+                        </button>
+                        <button onclick="switchAdminTab('tabTeachers')" id="btn_tabTeachers" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
+                            <i class="fa-solid fa-chalkboard-user ml-1"></i> إدارة المعلمين
+                        </button>
                         <button onclick="switchAdminTab('tabGallery')" id="btn_tabGallery" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
-                            <i class="fa-solid fa-cloud-arrow-up ml-1"></i> رفع صورة للمعرض
+                            <i class="fa-solid fa-cloud-arrow-up ml-1"></i> معرض الصور
                         </button>
                         <button onclick="switchAdminTab('tabCategories')" id="btn_tabCategories" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
                             <i class="fa-solid fa-folder-tree ml-1"></i> أقسام المعرض
                         </button>
                         <button onclick="switchAdminTab('tabNews')" id="btn_tabNews" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
-                            <i class="fa-solid fa-newspaper ml-1"></i> الأخبار العاجلة
+                            <i class="fa-solid fa-newspaper ml-1"></i> الشريط العاجل
                         </button>
                         <button onclick="switchAdminTab('tabHonors')" id="btn_tabHonors" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
                             <i class="fa-solid fa-award ml-1"></i> لوحة الشرف
@@ -496,10 +529,10 @@
                             <i class="fa-solid fa-inbox ml-1"></i> الشكاوى <span id="complaintsBadgeCount" class="px-1.5 py-0.5 rounded-full bg-red-600 text-white text-[10px]">0</span>
                         </button>
                         <button onclick="switchAdminTab('tabCloud')" id="btn_tabCloud" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-emerald-700 hover:text-emerald-900 whitespace-nowrap">
-                            <i class="fa-solid fa-globe ml-1"></i> المزامنة للجميع (Firebase)
+                            <i class="fa-solid fa-globe ml-1"></i> المزامنة (Firebase)
                         </button>
                         <button onclick="switchAdminTab('tabSecurity')" id="btn_tabSecurity" class="admin-tab-btn px-3 py-2 rounded-t-lg border-b-2 border-transparent text-slate-600 hover:text-slate-900 whitespace-nowrap">
-                            <i class="fa-solid fa-key ml-1"></i> أمان الإدارة
+                            <i class="fa-solid fa-key ml-1"></i> الأمان
                         </button>
                     </div>
 
@@ -559,6 +592,75 @@
                         </button>
                     </div>
 
+                    <!-- تبويب جديد: إدارة منشورات وأخبار المدرسة (بطاقات التعليقات) -->
+                    <div id="tabPosts" class="admin-tab-pane hidden space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">عنوان الخبر أو المنشور *</label>
+                                    <input type="text" id="postTitleInput" placeholder="مثال: موعد تسليم التقييمات الأسبوعية" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">الجهة المعلنة / الكاتب *</label>
+                                    <input type="text" id="postAuthorInput" value="إدارة المدرسة" placeholder="مثال: إدارة المدرسة / شؤون الطلبة" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">التصنيف *</label>
+                                    <select id="postBadgeInput" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white font-bold">
+                                        <option value="تنويه هام">تنويه هام</option>
+                                        <option value="خبر رسمي">خبر رسمي</option>
+                                        <option value="نشاط مدرسي">نشاط مدرسي</option>
+                                        <option value="امتحانات وتقييمات">امتحانات وتقييمات</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">نص الخبر أو التعليق بالتفصيل *</label>
+                                <textarea id="postContentInput" rows="3" placeholder="اكتب تفاصيل الخبر أو التنويه ليظهر في بطاقة التعليقات بالموقع..." class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs"></textarea>
+                            </div>
+                            <button onclick="stageAddSchoolPost()" class="w-full moe-gold-bg hover:bg-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs transition">
+                                <i class="fa-solid fa-plus ml-1"></i> إضافة المنشور إلى قسم أخبار المدرسة
+                            </button>
+                        </div>
+
+                        <div>
+                            <h5 class="text-xs font-black text-slate-700 mb-2">المنشورات الحالية بالموقع:</h5>
+                            <div id="adminPostsList" class="space-y-2 max-h-56 overflow-y-auto custom-scroll"></div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب جديد: إدارة هيئة التدريس والمعلمين -->
+                    <div id="tabTeachers" class="admin-tab-pane hidden space-y-4">
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">اسم المعلم / المعلمة *</label>
+                                    <input type="text" id="teacherNameInput" placeholder="مثال: أ/ سالم العكش" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">التخصص / المادة *</label>
+                                    <input type="text" id="teacherSubjectInput" placeholder="مثال: معلم خبير التاريخ" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">الدرجة أو الوصف (اختياري)</label>
+                                    <input type="text" id="teacherRoleInput" placeholder="مثال: الصف الأول والثاني الثانوي" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">صورة المعلم (اختياري - يتم ضغطها تلقائياً)</label>
+                                <input type="file" id="teacherPhotoInput" accept="image/*" class="w-full text-xs bg-white p-2 rounded-xl border border-slate-300">
+                            </div>
+                            <button onclick="stageSaveTeacher()" class="w-full moe-gold-bg hover:bg-amber-500 text-slate-950 font-black py-2.5 rounded-xl text-xs transition">
+                                <i class="fa-solid fa-user-plus ml-1"></i> إضافة المعلم إلى قائمة هيئة التدريس
+                            </button>
+                        </div>
+
+                        <div>
+                            <h5 class="text-xs font-black text-slate-700 mb-2">قائمة المعلمين المسجلين حالياً:</h5>
+                            <div id="adminTeachersList" class="space-y-2 max-h-56 overflow-y-auto custom-scroll"></div>
+                        </div>
+                    </div>
+
                     <!-- تبويب رفع صورة للمعرض -->
                     <div id="tabGallery" class="admin-tab-pane hidden space-y-4">
                         <div class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
@@ -601,9 +703,9 @@
                     <!-- تبويب الأخبار العاجلة -->
                     <div id="tabNews" class="admin-tab-pane hidden space-y-4">
                         <div class="flex gap-2">
-                            <input type="text" id="adminNewsInput" placeholder="اكتب نص الخبر العاجل أو التنويه..." class="flex-1 px-3 py-2 rounded-xl border border-slate-300 text-xs">
+                            <input type="text" id="adminNewsInput" placeholder="اكتب نص الخبر العاجل في الشريط المتحرك..." class="flex-1 px-3 py-2 rounded-xl border border-slate-300 text-xs">
                             <button onclick="stageAddNewsItem()" class="moe-gold-bg hover:bg-amber-500 text-slate-950 font-black px-4 py-2 rounded-xl text-xs shrink-0">
-                                + إضافة الخبر
+                                + إضافة للشريط
                             </button>
                         </div>
                         <div id="adminNewsListContainer" class="space-y-2"></div>
@@ -659,7 +761,7 @@
                             </div>
                             <div class="flex flex-wrap gap-2">
                                 <button onclick="saveFirebaseUrlAndSync()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black transition">
-                                    <i class="fa-solid fa-link ml-1"></i> مزامنة ورفع الجداول الجديدة للجميع الآن
+                                    <i class="fa-solid fa-link ml-1"></i> مزامنة ورفع البيانات للجميع الآن
                                 </button>
                                 <button onclick="resetSchedulesToOfficialDefault()" class="px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-black transition">
                                     <i class="fa-solid fa-rotate ml-1"></i> استعادة الجدول الرسمي الأصلي
@@ -698,7 +800,7 @@
 
     <script>
         const DEFAULT_FIREBASE_DB_URL = "https://rabaa-school-default-rtdb.firebaseio.com";
-        const SCHEDULE_VERSION = "v4_official_2026";
+        const SCHEDULE_VERSION = "v5_official_2026";
 
         function getFirebaseDbUrl() {
             const saved = localStorage.getItem('rabaa_firebase_url_v1') || DEFAULT_FIREBASE_DB_URL;
@@ -711,7 +813,45 @@
             'انتظام الدراسة بمدرسة رابعة الثانوية المشتركة والالتزام بالحضور في طابور الصباح الساعة 7:45 صباحاً.',
             'تم اعتماد جدول الحصص الرسمي الجديد (5 حصص يومياً بزمن 50 دقيقة للحصة + 30 دقيقة فسحة بعد الحصة الرابعة).',
             'متاح الآن لجميع الطلاب الدخول المباشر لمنصة الثقافة المالية ومنصة البرمجة (Sprix) عبر قسم الخدمات.',
-            'يمكن تحميل الكتب المدرسية والتقييمات الأسبوعية عبر بطاقة بنك المعرفة المصري بالموقع.'
+            'يمكن متابعة أحدث القرارات والتنويهات عبر قسم منشورات وأخبار المدرسة الجديد.'
+        ];
+
+        const defaultPosts = [
+            {
+                id: 'post-1',
+                title: 'اعتماد جدول الحصص الأسبوعي الجديد للعام الدراسي',
+                author: 'إدارة المدرسة',
+                badge: 'خبر رسمي',
+                date: 'منذ يومين',
+                content: 'تعلن إدارة مدرسة رابعة الثانوية المشتركة عن انتظام العمل بجدول الحصص المعتمد بواقع 5 حصص يومياً (زمن الحصة 50 دقيقة) تتخللها فسحة مدرسية مدتها 30 دقيقة بعد الحصة الرابعة. نتمنى لجميع أبنائنا الطلاب عاماً دراسياً موفقاً.'
+            },
+            {
+                id: 'post-2',
+                title: 'تفعيل منصات البرمجة (Sprix) والثقافة المالية',
+                author: 'وحدة التطوير التكنولوجي',
+                badge: 'تنويه هام',
+                date: 'أمس',
+                content: 'نهيب بجميع طلاب الصف الأول والثاني الثانوي الدخول على رابط منصة البرمجة اليابانية Sprix ومنصة الثقافة المالية من خلال قسم الخدمات بالموقع لمتابعة التكليفات والتدريبات التفاعلية.'
+            },
+            {
+                id: 'post-3',
+                title: 'الالتزام بالحضور اليومي والتقييمات الأسبوعية',
+                author: 'شؤون الطلاب',
+                badge: 'امتحانات وتقييمات',
+                date: 'اليوم',
+                content: 'يرجى من جميع الطلاب الالتزام التام بالحضور في موعد الطابور الصباحي ومتابعة الأداءات الصفية والتقييمات الأسبوعية مع السادة المعلمين داخل الفصول.'
+            }
+        ];
+
+        const defaultTeachers = [
+            { id: 't-1', name: 'أ/ طاهر', subject: 'اللغة العربية والتربية الدينية', role: 'معلم خبير بالمدرسة', photo: 'https://ui-avatars.com/api/?name=طاهر&background=0b1f3a&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-2', name: 'أ/ سالم العكش', subject: 'التاريخ', role: 'معلم خبير التاريخ', photo: 'https://ui-avatars.com/api/?name=سالم+العكش&background=0b1f3a&color=d4af37&size=200&font-size=0.35&bold=true' },
+            { id: 't-3', name: 'أ/ منار', subject: 'اللغة الإنجليزية', role: 'معلم اللغة الإنجليزية', photo: 'https://ui-avatars.com/api/?name=منار&background=13315c&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-4', name: 'أ/ شيماء', subject: 'الرياضيات', role: 'معلم الرياضيات', photo: 'https://ui-avatars.com/api/?name=شيماء&background=13315c&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-5', name: 'أ/ تامر', subject: 'العلوم المتكاملة', role: 'معلم العلوم المتكاملة', photo: 'https://ui-avatars.com/api/?name=تامر&background=0b1f3a&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-6', name: 'أ/ محمود', subject: 'اللغة الإنجليزية', role: 'معلم اللغة الإنجليزية', photo: 'https://ui-avatars.com/api/?name=محمود&background=0b1f3a&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-7', name: 'أ/ همت', subject: 'اللغة العربية', role: 'معلم اللغة العربية', photo: 'https://ui-avatars.com/api/?name=همت&background=13315c&color=d4af37&size=200&font-size=0.4&bold=true' },
+            { id: 't-8', name: 'أ/ عبد الرحمن', subject: 'البرمجة والحاسب الآلي', role: 'معلم الحاسب والبرمجة', photo: 'https://ui-avatars.com/api/?name=عبد+الرحمن&background=0b1f3a&color=d4af37&size=200&font-size=0.35&bold=true' }
         ];
 
         const defaultCategories = ['طابور الصباح', 'أنشطة رياضية', 'معامل التطوير'];
@@ -744,10 +884,8 @@
             { id: 'h4', name: 'نورهان طارق علي', rank: 'الطالبة المثالية', grade: 'الصف الأول الثانوي', score: '96.2%', photo: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80' }
         ];
 
-        // الجداول المدرسية المعتمدة لجميع الفصول (أول 5 حصص لكل يوم مع أسماء المعلمين)
         function buildOfficialSchedules() {
             return {
-                // الصف الأول الثانوي (5 فصول)
                 "1-1": [
                     ["لغة عربية (أ/ طاهر)", "لغة إنجليزية (أ/ منار)", "رياضيات (أ/ شيماء)", "تاريخ (أ/ منى)", "علوم متكاملة (أ/ تامر)"],
                     ["علوم متكاملة (أ/ تامر)", "برمجة (أ/ عبد الرحمن)", "فلسفة (أ/ سهام)", "لغة فرنسية (أ/ سوسن)", "رياضيات (أ/ شيماء)"],
@@ -783,8 +921,6 @@
                     ["لغة عربية (أ/ حسن)", "رياضيات (أ/ شيماء)", "علوم متكاملة (أ/ رشاد)", "لغة إنجليزية (أ/ منار)", "تاريخ (أ/ منى)"],
                     ["تاريخ (أ/ منى)", "لغة عربية (أ/ حسن)", "دين (أ/ حسن)", "علوم متكاملة (أ/ رشاد)", "لغة إنجليزية (أ/ منار)"]
                 ],
-
-                // الصف الثاني الثانوي (5 فصول عامة: 2/1 حتى 2/5)
                 "2-1": [
                     ["لغة إنجليزية (أ/ محمود)", "تاريخ (أ/ سالم)", "ثقافة مالية", "لغة عربية (أ/ همت)", "مادة اختيارية (أ/ عبد الرحمن / نور)"],
                     ["مادة اختيارية (أ/ عبد الرحمن / نور)", "لغة عربية (أ/ همت)", "تاريخ (أ/ سالم)", "لغة إنجليزية (أ/ محمود)", "لغة عربية (أ/ همت)"],
@@ -825,12 +961,14 @@
 
         let liveState = {
             scheduleVersion: SCHEDULE_VERSION,
-            schedules: JSON.parse(localStorage.getItem('rabaa_schedules_v4')) || buildOfficialSchedules(),
-            news: JSON.parse(localStorage.getItem('rabaa_news_v4')) || defaultNews,
-            categories: JSON.parse(localStorage.getItem('rabaa_cats_v4')) || defaultCategories,
-            gallery: JSON.parse(localStorage.getItem('rabaa_gallery_v4')) || defaultGallery,
-            honors: JSON.parse(localStorage.getItem('rabaa_honors_v4')) || defaultHonors,
-            complaints: JSON.parse(localStorage.getItem('rabaa_complaints_v4')) || []
+            schedules: JSON.parse(localStorage.getItem('rabaa_schedules_v5')) || buildOfficialSchedules(),
+            news: JSON.parse(localStorage.getItem('rabaa_news_v5')) || defaultNews,
+            posts: JSON.parse(localStorage.getItem('rabaa_posts_v5')) || defaultPosts,
+            teachers: JSON.parse(localStorage.getItem('rabaa_teachers_v5')) || defaultTeachers,
+            categories: JSON.parse(localStorage.getItem('rabaa_cats_v5')) || defaultCategories,
+            gallery: JSON.parse(localStorage.getItem('rabaa_gallery_v5')) || defaultGallery,
+            honors: JSON.parse(localStorage.getItem('rabaa_honors_v5')) || defaultHonors,
+            complaints: JSON.parse(localStorage.getItem('rabaa_complaints_v5')) || []
         };
 
         let draftState = null;
@@ -850,10 +988,11 @@
                 const res = await fetch(`${dbUrl}/school_portal_data.json`);
                 if (res.ok) {
                     const cloudData = await res.json();
-                    // إذا كانت السحابة تحتوي على إصدار الجدول الجديد نستخدمها، وإلا نرفع الجدول الرسمي الجديد للسحابة فوراً
                     if (cloudData && cloudData.scheduleVersion === SCHEDULE_VERSION) {
                         if (cloudData.schedules) liveState.schedules = cloudData.schedules;
                         if (cloudData.news) liveState.news = cloudData.news;
+                        if (cloudData.posts) liveState.posts = cloudData.posts;
+                        if (cloudData.teachers) liveState.teachers = cloudData.teachers;
                         if (cloudData.categories) liveState.categories = cloudData.categories;
                         if (cloudData.gallery) liveState.gallery = cloudData.gallery;
                         if (cloudData.honors) liveState.honors = cloudData.honors;
@@ -861,10 +1000,11 @@
                         saveLiveToLocalStorage();
                         renderAllPublicSections();
                     } else {
-                        // الحفاظ على الصور والشكاوى القديمة إن وجدت مع ترقية الجدول للإصدار الجديد
                         if (cloudData) {
                             if (cloudData.gallery && cloudData.gallery.length) liveState.gallery = cloudData.gallery;
                             if (cloudData.complaints && cloudData.complaints.length) liveState.complaints = cloudData.complaints;
+                            if (cloudData.posts && cloudData.posts.length) liveState.posts = cloudData.posts;
+                            if (cloudData.teachers && cloudData.teachers.length) liveState.teachers = cloudData.teachers;
                         }
                         liveState.scheduleVersion = SCHEDULE_VERSION;
                         liveState.schedules = buildOfficialSchedules();
@@ -919,11 +1059,11 @@
                 return;
             }
             localStorage.setItem('rabaa_firebase_url_v1', urlInput);
-            statusEl.textContent = 'جاري الاتصال بالسحابة ومزامنة الجداول الجديدة للجميع...';
+            statusEl.textContent = 'جاري الاتصال بالسحابة ومزامنة البيانات للجميع...';
             statusEl.className = 'text-xs font-bold text-amber-600';
             const ok = await pushLiveStateToCloud();
             if (ok) {
-                statusEl.textContent = 'تم الربط السحابي بنجاح! الجداول الجديدة تظهر عند كل الزوار فوراً.';
+                statusEl.textContent = 'تم الربط السحابي بنجاح! كافة البيانات تظهر عند كل الزوار فوراً.';
                 statusEl.className = 'text-xs font-bold text-emerald-700';
             } else {
                 statusEl.textContent = 'تعذر الكتابة في الرابط، تأكد من تفعيل Rules على true.';
@@ -941,17 +1081,14 @@
         }
 
         function saveLiveToLocalStorage() {
-            localStorage.setItem('rabaa_schedules_v4', JSON.stringify(liveState.schedules));
-            localStorage.setItem('rabaa_news_v4', JSON.stringify(liveState.news));
-            localStorage.setItem('rabaa_cats_v4', JSON.stringify(liveState.categories));
-            localStorage.setItem('rabaa_gallery_v4', JSON.stringify(liveState.gallery));
-            localStorage.setItem('rabaa_honors_v4', JSON.stringify(liveState.honors));
-            localStorage.setItem('rabaa_complaints_v4', JSON.stringify(liveState.complaints));
-        }
-
-        function openExternalUrl(url) {
-            const win = window.open(url, '_blank', 'noopener,noreferrer');
-            if (!win) window.location.href = url;
+            localStorage.setItem('rabaa_schedules_v5', JSON.stringify(liveState.schedules));
+            localStorage.setItem('rabaa_news_v5', JSON.stringify(liveState.news));
+            localStorage.setItem('rabaa_posts_v5', JSON.stringify(liveState.posts));
+            localStorage.setItem('rabaa_teachers_v5', JSON.stringify(liveState.teachers));
+            localStorage.setItem('rabaa_cats_v5', JSON.stringify(liveState.categories));
+            localStorage.setItem('rabaa_gallery_v5', JSON.stringify(liveState.gallery));
+            localStorage.setItem('rabaa_honors_v5', JSON.stringify(liveState.honors));
+            localStorage.setItem('rabaa_complaints_v5', JSON.stringify(liveState.complaints));
         }
 
         function renderDateHeader() {
@@ -967,6 +1104,65 @@
                 return;
             }
             ticker.innerHTML = liveState.news.map(n => `<span class="mx-6">✦ ${n}</span>`).join('');
+        }
+
+        function renderSchoolPostsSection() {
+            const grid = document.getElementById('schoolPostsGrid');
+            if (!liveState.posts || !liveState.posts.length) {
+                grid.innerHTML = `<div class="col-span-full text-center py-8 text-xs font-bold text-slate-400">لا توجد منشورات أو أخبار مضافة حالياً</div>`;
+                return;
+            }
+            grid.innerHTML = liveState.posts.map(post => {
+                let badgeColors = 'bg-amber-100 text-amber-800 border-amber-300';
+                if (post.badge === 'تنويه هام') badgeColors = 'bg-red-100 text-red-800 border-red-300';
+                else if (post.badge === 'امتحانات وتقييمات') badgeColors = 'bg-emerald-100 text-emerald-800 border-emerald-300';
+                else if (post.badge === 'نشاط مدرسي') badgeColors = 'bg-cyan-100 text-cyan-800 border-cyan-300';
+
+                return `
+                <div class="bg-slate-50 rounded-2xl p-5 shadow-sm border border-slate-200 hover:shadow-md hover:border-amber-400 transition flex flex-col justify-between relative">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-10 h-10 rounded-full moe-navy text-amber-400 flex items-center justify-center font-black text-sm shadow-sm shrink-0">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-black text-slate-900">${post.author || 'إدارة المدرسة'}</h4>
+                                    <span class="text-[10px] text-slate-400 font-semibold"><i class="fa-regular fa-clock ml-1"></i>${post.date}</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] font-black px-2.5 py-1 rounded-full border ${badgeColors}">${post.badge || 'خبر'}</span>
+                        </div>
+                        <h3 class="font-black text-slate-900 text-sm sm:text-base mb-2">${post.title}</h3>
+                        <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 text-xs text-slate-700 leading-relaxed whitespace-pre-line shadow-inner">
+                            ${post.content}
+                        </div>
+                    </div>
+                    <div class="mt-3 pt-2 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500 font-bold">
+                        <span><i class="fa-solid fa-circle-check text-emerald-600 ml-1"></i> منشور رسمي معتمد</span>
+                        <span class="text-amber-700">مدرسة رابعة الثانوية</span>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function renderTeachersSection() {
+            const grid = document.getElementById('teachersGrid');
+            if (!liveState.teachers || !liveState.teachers.length) {
+                grid.innerHTML = `<div class="col-span-full text-center py-8 text-xs font-bold text-slate-400">لا توجد بيانات معلمين مضافة حالياً</div>`;
+                return;
+            }
+            grid.innerHTML = liveState.teachers.map(t => `
+                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 text-center hover:shadow-lg hover:border-amber-400 transition group">
+                    <div class="w-24 h-24 rounded-full mx-auto mb-3.5 p-1 border-2 moe-gold-border overflow-hidden bg-slate-100 shadow-inner">
+                        <img src="${t.photo}" alt="${t.name}" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition duration-300">
+                    </div>
+                    <span class="inline-block text-[11px] font-black bg-amber-100 text-amber-900 px-3 py-0.5 rounded-full mb-1.5 border border-amber-300">${t.subject}</span>
+                    <h3 class="font-black text-slate-900 text-base">${t.name}</h3>
+                    <p class="text-xs text-slate-500 font-semibold mt-1">${t.role || 'عضو هيئة التدريس'}</p>
+                </div>
+            `).join('');
         }
 
         function updateHeroSliderDisplay() {
@@ -1040,14 +1236,14 @@
         function renderHonorsSection() {
             const grid = document.getElementById('honorsGrid');
             grid.innerHTML = liveState.honors.map(st => `
-                <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 text-center hover:shadow-md transition">
-                    <div class="w-20 h-20 rounded-full mx-auto mb-3 p-1 border-2 moe-gold-border overflow-hidden">
+                <div class="bg-slate-50 rounded-2xl p-5 shadow-sm border border-slate-200 text-center hover:shadow-md transition">
+                    <div class="w-20 h-20 rounded-full mx-auto mb-3 p-1 border-2 moe-gold-border overflow-hidden bg-white">
                         <img src="${st.photo}" alt="${st.name}" class="w-full h-full object-cover rounded-full">
                     </div>
                     <span class="inline-block text-[11px] font-black bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded-full mb-1">${st.rank}</span>
                     <h3 class="font-black text-slate-900 text-base">${st.name}</h3>
                     <p class="text-xs text-slate-500 mt-0.5">${st.grade}</p>
-                    <div class="mt-3 pt-2 border-t border-slate-100 text-sm font-black text-emerald-700">${st.score}</div>
+                    <div class="mt-3 pt-2 border-t border-slate-200 text-sm font-black text-emerald-700">${st.score}</div>
                 </div>
             `).join('');
         }
@@ -1115,9 +1311,11 @@
 
         function renderAllPublicSections() {
             renderNewsTicker();
+            renderSchoolPostsSection();
             updateHeroSliderDisplay();
             renderClassButtons();
             renderScheduleTable();
+            renderTeachersSection();
             renderHonorsSection();
             renderGallerySection();
         }
@@ -1275,6 +1473,8 @@
 
         function renderAllAdminLists() {
             loadAdminSchedulePreview();
+            renderAdminPostsTab();
+            renderAdminTeachersTab();
             renderAdminCategoriesTab();
             renderAdminGalleryTab();
             renderAdminNewsTab();
@@ -1301,6 +1501,121 @@
             draftState.schedules[cls][day][period] = val;
             setUnsavedState(true);
             alert('تم إدراج تعديل الحصة في المسودة؛ اضغط «حفظ التغييرات» لاعتمادها.');
+        }
+
+        // إدارة منشورات الأخبار (بطاقات التعليقات)
+        function renderAdminPostsTab() {
+            const listEl = document.getElementById('adminPostsList');
+            if (!draftState.posts) draftState.posts = [];
+            if (!draftState.posts.length) {
+                listEl.innerHTML = `<div class="text-center py-4 text-xs text-slate-400 font-bold">لا توجد منشورات حالياً</div>`;
+                return;
+            }
+            listEl.innerHTML = draftState.posts.map((p, idx) => `
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex justify-between items-start gap-3 text-xs">
+                    <div class="space-y-1 flex-1">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-black text-[10px]">${p.badge}</span>
+                            <span class="font-black text-slate-900">${p.title}</span>
+                            <span class="text-[10px] text-slate-400">(${p.author} - ${p.date})</span>
+                        </div>
+                        <p class="text-slate-600 line-clamp-2">${p.content}</p>
+                    </div>
+                    <button onclick="stageDeleteSchoolPost(${idx})" class="px-2.5 py-1.5 rounded-lg bg-red-100 text-red-700 hover:bg-red-200 font-bold shrink-0">
+                        <i class="fa-solid fa-trash"></i> حذف
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function stageAddSchoolPost() {
+            const title = document.getElementById('postTitleInput').value.trim();
+            const author = document.getElementById('postAuthorInput').value.trim() || 'إدارة المدرسة';
+            const badge = document.getElementById('postBadgeInput').value;
+            const content = document.getElementById('postContentInput').value.trim();
+
+            if (!title || !content) return alert('يرجى كتابة عنوان المنشور وتفاصيل الخبر.');
+
+            if (!draftState.posts) draftState.posts = [];
+            draftState.posts.unshift({
+                id: 'post-' + Date.now(),
+                title,
+                author,
+                badge,
+                date: new Date().toLocaleDateString('ar-EG', { day: 'numeric', month: 'long', year: 'numeric' }),
+                content
+            });
+
+            document.getElementById('postTitleInput').value = '';
+            document.getElementById('postContentInput').value = '';
+            setUnsavedState(true);
+            renderAdminPostsTab();
+        }
+
+        function stageDeleteSchoolPost(idx) {
+            draftState.posts.splice(idx, 1);
+            setUnsavedState(true);
+            renderAdminPostsTab();
+        }
+
+        // إدارة المعلمين وهيئة التدريس
+        function renderAdminTeachersTab() {
+            const listEl = document.getElementById('adminTeachersList');
+            if (!draftState.teachers) draftState.teachers = [];
+            if (!draftState.teachers.length) {
+                listEl.innerHTML = `<div class="text-center py-4 text-xs text-slate-400 font-bold">لا يوجد معلمون مسجلون حالياً</div>`;
+                return;
+            }
+            listEl.innerHTML = draftState.teachers.map((t, idx) => `
+                <div class="flex justify-between items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs">
+                    <div class="flex items-center gap-2.5">
+                        <img src="${t.photo}" class="w-10 h-10 rounded-full object-cover border border-amber-400 shrink-0">
+                        <div>
+                            <div class="font-black text-slate-900">${t.name} <span class="text-amber-700 font-bold">(${t.subject})</span></div>
+                            <div class="text-[10px] text-slate-500">${t.role || ''}</div>
+                        </div>
+                    </div>
+                    <button onclick="stageDeleteTeacher(${idx})" class="px-2.5 py-1 rounded-lg bg-red-100 text-red-700 hover:bg-red-200 font-bold shrink-0">
+                        <i class="fa-solid fa-trash"></i> حذف
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        async function stageSaveTeacher() {
+            const name = document.getElementById('teacherNameInput').value.trim();
+            const subject = document.getElementById('teacherSubjectInput').value.trim();
+            const role = document.getElementById('teacherRoleInput').value.trim() || 'عضو هيئة التدريس';
+            const photoInput = document.getElementById('teacherPhotoInput');
+
+            if (!name || !subject) return alert('يرجى إدخال اسم المعلم والتخصص.');
+
+            let photoUrl = `https://ui-avatars.com/api/?name=${encodeURIComponent(name.replace('أ/', '').trim())}&background=0b1f3a&color=d4af37&size=200&font-size=0.38&bold=true`;
+            if (photoInput.files.length) {
+                photoUrl = await compressImageFile(photoInput.files[0], 350, 0.8);
+            }
+
+            if (!draftState.teachers) draftState.teachers = [];
+            draftState.teachers.push({
+                id: 't-' + Date.now(),
+                name,
+                subject,
+                role,
+                photo: photoUrl
+            });
+
+            document.getElementById('teacherNameInput').value = '';
+            document.getElementById('teacherSubjectInput').value = '';
+            document.getElementById('teacherRoleInput').value = '';
+            photoInput.value = '';
+            setUnsavedState(true);
+            renderAdminTeachersTab();
+        }
+
+        function stageDeleteTeacher(idx) {
+            draftState.teachers.splice(idx, 1);
+            setUnsavedState(true);
+            renderAdminTeachersTab();
         }
 
         function renderAdminCategoriesTab() {
